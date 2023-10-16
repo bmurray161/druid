@@ -3,6 +3,7 @@
 # @source https://github.com/Insality/druid
 
 echo "Run bash for $1"
+wsl
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 is_defree_installed=$(pip3 list --disable-pip-version-check | grep -E "deftree")
@@ -14,3 +15,4 @@ if [ -z "$is_defree_installed" ]; then
 fi
 
 python3 $1 $2
+
